@@ -28,22 +28,16 @@ And the Regular Expression is:
 
 ## Question 2
 
-### Q2.A
-DFA for $L_1$:
+### Q2.A DFA for $L_1$:
 
 ![](img/2-l1.png)\
 
 
-### Q2.B
-
-DFA for $L_2$:
+### Q2.B DFA for $L_2$:
 
 ![](img/2-l2.png)\
 
-### Q2.C
 
-DFA for $L_1 \cup L_2$:
+### Q2.C DFA for $L_1 \cup L_2$:
 
-```
-// TODO
-```
+![](img/2-l3.png)\

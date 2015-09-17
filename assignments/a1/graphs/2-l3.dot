@@ -2,7 +2,7 @@ digraph finite_state_machine {
 	rankdir = LR;
 	/*size = "4,6"*/
 	/*ppi = 300*/
-	node [ shape = doublecircle ]; "Double";
+	node [ shape = doublecircle ]; "Single" "Start" "Double";
 	node [ shape = circle ];
 
 	"Start" -> "Single"  [ label = "A" ]
