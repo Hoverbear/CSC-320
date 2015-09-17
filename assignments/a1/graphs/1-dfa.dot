@@ -1,0 +1,22 @@
+digraph finite_state_machine {
+	rankdir = LR;
+	/*size = "4,6"*/
+	/*ppi = 300*/
+	node [ shape = doublecircle ]; "End";
+	node [ shape = circle ];
+
+	"Start" -> "Trap"  [ label = "A" ]
+	"Start" -> "End"   [ label = "B" ]
+
+	"Trap" -> "Trap"   [ label = "B" ]
+	"Trap" -> "Trap"   [ label = "A" ]
+
+	"End" -> "B Marker" [ label = "B" ]
+	"End" -> "A Marker" [ label = "A" ]
+
+	"A Marker" -> "End"  [ label = "A" ]
+	"A Marker" -> "Trap" [ label = "B" ]
+
+	"B Marker" -> "End" [ label = "B" ]
+	"B Marker" -> "Trap" [ label = "A" ]
+}
