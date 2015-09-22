@@ -2,15 +2,18 @@ digraph finite_state_machine {
 	rankdir = LR;
 	/*size = "4,6"*/
 	/*ppi = 300*/
+	node [ shape = none ] "";
 	node [ shape = doublecircle ]; "Single" "Start" "Double";
 	node [ shape = circle ];
 
-	"Start" -> "Single"  [ label = "A" ]
-	"Start" -> "Start"   [ label = "B" ]
+	"" -> "Start"
 
-    "Single" -> "Double"   [ label = "A" ]
-    "Single" -> "Single"   [ label = "B" ]
+	"Start" -> "Single"  [ label = "a" ]
+	"Start" -> "Start"   [ label = "b" ]
 
-    "Double" -> "Double" [ label = "A"]
-    "Double" -> "Double" [ label = "B"]
+    "Single" -> "Double"   [ label = "a" ]
+    "Single" -> "Single"   [ label = "b" ]
+
+    "Double" -> "Double" [ label = "a"]
+    "Double" -> "Double" [ label = "b"]
 }

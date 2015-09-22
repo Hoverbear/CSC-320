@@ -41,3 +41,15 @@ And the Regular Expression is:
 ### Q2.C DFA for $L_1 \cup L_2$:
 
 ![](img/2-l3.png)\
+
+
+## Question 3
+
+|       | a     | b           |
+|:-----:|:-----:|:------------|
+| {1,2} | {3,1} | $\emptyset$ |
+| {3,1} | {2,3} | {2,3}       |
+| {2,3} | {1,2} | {2,3}       |
+| $\emptyset$ | $\emptyset$ | $\emptyset$ |
+
+![](img/3-dfa.png)\
