@@ -1,0 +1,31 @@
+digraph finite_state_machine {
+    rankdir = LR;
+    /*size = "4,6"*/
+    ppi = 300
+    node [ shape = none ] "";
+    node [ shape = doublecircle ]; "X";
+    node [ shape = circle ];
+
+    "" -> "X"
+
+    "X" -> "A"  [ label = "ɛ" ]
+
+    "A" -> "B"  [ label = "0" ]
+
+    "B" -> "C"  [ label = "0" ]
+
+    "C" -> "A"  [ label = "ɛ" ]
+    "C" -> "D"  [ label = "1" ]
+
+    "D" -> "E"  [ label = "1" ]
+
+    /*"E" -> "C"  [ label = "ɛ" ]*/
+    "E" -> "X"  [ label = "ɛ" ]
+
+    "X" -> "F"  [ label = "ɛ" ]
+
+    "F" -> "G"  [ label = "0" ]
+    "G" -> "H"  [ label = "1" ]
+
+    "H" -> "X"  [ label = "ɛ" ]
+}

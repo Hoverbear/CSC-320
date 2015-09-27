@@ -10,7 +10,7 @@ img/%.png: graphs/%.dot
 	mkdir -p img
 	dot -Tpng $< -o $@
 
-answers.pdf: answers.md
+answers.pdf: answers.md $(IMAGES)
 	pandoc --smart --standalone --highlight-style=haddock -f markdown -t latex -o $@ $<
 
 clean:

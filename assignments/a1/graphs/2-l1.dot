@@ -11,9 +11,9 @@ digraph finite_state_machine {
 	"Start" -> "Single"  [ label = "a" ]
 	"Start" -> "Start"   [ label = "b" ]
 
-    "Single" -> "Double"   [ label = "a" ]
-    "Single" -> "Single"   [ label = "b" ]
+	"Single" -> "Double"   [ label = "a" ]
+	"Single" -> "Single"   [ label = "b" ]
 
-    "Double" -> "Double" [ label = "a"]
-    "Double" -> "Double" [ label = "b"]
+	"Double" -> "Double" [ label = "a"]
+	"Double" -> "Double" [ label = "b"]
 }

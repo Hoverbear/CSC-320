@@ -1,0 +1,17 @@
+digraph finite_state_machine {
+    rankdir = LR;
+    /*size = "4,6"*/
+    ppi = 300
+    node [ shape = none ] "";
+    node [ shape = rectangle ] "A" "B";
+    node [ shape = doublecircle ]; "End";
+    node [ shape = circle ];
+
+    "" -> "Start"
+
+    "Start" -> "A"  [ label = "ɛ" ]
+
+    "A" -> "B"  [ label = "ɛ" ]
+
+    "B" -> "End"  [ label = "ɛ" ]
+}
