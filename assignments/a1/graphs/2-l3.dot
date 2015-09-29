@@ -3,20 +3,34 @@ digraph finite_state_machine {
 	/*size = "4,6"*/
 	/*ppi = 300*/
 	node [ shape = none ] "";
-	node [ shape = doublecircle ]; "Single" "Start" "Double" "More";
-	node [ shape = circle ];
+	node [ shape = doublecircle ];
 
-	"" -> "Start"
+	"" -> "(0,A)"
 
-	"Start" -> "Single"  [ label = "a" ]
-	"Start" -> "Start"   [ label = "b" ]
+	"(0,A)" -> "(1,B)" [ label = "a" ]
+	"(0,A)" -> "(0,A)" [ label = "b" ]
+	"(0,B)" -> "(1,C)" [ label = "a" ]
+	"(0,B)" -> "(0,B)" [ label = "b" ]
+	"(0,C)" -> "(1,D)" [ label = "a" ]
+	"(0,C)" -> "(0,C)" [ label = "b" ]
+	"(0,D)" -> "(1,D)" [ label = "a" ]
+	"(0,D)" -> "(0,D)" [ label = "b" ]
 
-	"Single" -> "Double"   [ label = "a" ]
-	"Single" -> "Single"   [ label = "b" ]
+	"(1,A)" -> "(2,B)" [ label = "a" ]
+	"(1,A)" -> "(1,A)" [ label = "b" ]
+	"(1,B)" -> "(2,C)" [ label = "a" ]
+	"(1,B)" -> "(1,B)" [ label = "b" ]
+	"(1,C)" -> "(2,D)" [ label = "a" ]
+	"(1,C)" -> "(1,C)" [ label = "b" ]
+	"(1,D)" -> "(2,D)" [ label = "a" ]
+	"(1,D)" -> "(1,D)" [ label = "b" ]
 
-	"Double" -> "More" [ label = "a"]
-	"Double" -> "Double" [ label = "b"]
-
-	"More" -> "More" [ label = "a"]
-	"More" -> "More" [ label = "b"]
+	"(2,A)" -> "(2,B)" [ label = "a" ]
+	"(2,A)" -> "(2,A)" [ label = "b" ]
+	"(2,B)" -> "(2,C)" [ label = "a" ]
+	"(2,B)" -> "(2,B)" [ label = "b" ]
+	"(2,C)" -> "(2,D)" [ label = "a" ]
+	"(2,C)" -> "(2,C)" [ label = "b" ]
+	"(2,D)" -> "(2,D)" [ label = "a" ]
+	"(2,D)" -> "(2,D)" [ label = "b" ]
 }

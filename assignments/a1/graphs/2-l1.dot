@@ -3,17 +3,17 @@ digraph finite_state_machine {
 	/*size = "4,6"*/
 	/*ppi = 300*/
 	node [ shape = none ] "";
-	node [ shape = doublecircle ]; "Double";
+	node [ shape = doublecircle ]; "2";
 	node [ shape = circle ];
 
-	"" -> "Start"
+	"" -> "0"
 
-	"Start" -> "Single"  [ label = "a" ]
-	"Start" -> "Start"   [ label = "b" ]
+	"0" -> "1"  [ label = "a" ]
+	"0" -> "0"   [ label = "b" ]
 
-	"Single" -> "Double"   [ label = "a" ]
-	"Single" -> "Single"   [ label = "b" ]
+	"1" -> "2"   [ label = "a" ]
+	"1" -> "1"   [ label = "b" ]
 
-	"Double" -> "Double" [ label = "a"]
-	"Double" -> "Double" [ label = "b"]
+	"2" -> "2" [ label = "a"]
+	"2" -> "2" [ label = "b"]
 }

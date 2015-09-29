@@ -3,20 +3,20 @@ digraph finite_state_machine {
 	/*size = "4,6"*/
 	/*ppi = 300*/
 	node [ shape = none ] "";
-	node [ shape = doublecircle ]; "Start" "Single" "Double";
+	node [ shape = doublecircle ]; "A" "B" "C";
 	node [ shape = circle ];
 
-	"" -> "Start"
+	"" -> "A"
 
-	"Start" -> "Single"  [ label = "a" ]
-	"Start" -> "Start"   [ label = "b" ]
+	"A" -> "B"  [ label = "a" ]
+	"A" -> "A"   [ label = "b" ]
 
-	"Single" -> "Double"   [ label = "a" ]
-	"Single" -> "Single"   [ label = "b" ]
+	"B" -> "C"   [ label = "a" ]
+	"B" -> "B"   [ label = "b" ]
 
-	"Double" -> "More" [ label = "a"]
-	"Double" -> "Double" [ label = "b"]
+	"C" -> "D" [ label = "a"]
+	"C" -> "C" [ label = "b"]
 
-	"More" -> "More" [ label = "a"]
-	"More" -> "More" [ label = "b"]
+	"D" -> "D" [ label = "a"]
+	"D" -> "D" [ label = "b"]
 }
