@@ -1,0 +1,20 @@
+digraph finite_state_machine {
+    rankdir = LR;
+    /*size = "4,6"*/
+    /*ppi = 300*/
+    node [ shape = none ] "";
+    node [ shape = doublecircle ]; "Q1,Q2" "Q5";
+    node [ shape = circle ];
+
+    "" -> "Q0"
+
+    "Q0" -> "Q1,Q2" [ label = "0,1" ]
+
+    "Q1,Q2" -> "Q3,Q4"  [ label = "0,1" ]
+
+    "Q3,Q4" -> "Q5" [ label = "0,1" ]
+
+    "Q5" -> "Q5" [ label = "0,1" ]
+
+}
+
