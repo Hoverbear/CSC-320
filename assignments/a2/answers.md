@@ -42,9 +42,42 @@ Since the string does not contain enough $0$'s at the start, this is not regular
 
 ### Q3.a
 
+$$ \{ \omega \in \{0,1\}^* | \omega = \omega^R \} $$
+
+$$ G_{rev} = (\{P\},\{0,1\},A,P) $$
+
+The grammar rules are:
+
+$$ P \rightarrow \epsilon $$
+$$ P \rightarrow 0 $$
+$$ P \rightarrow 1 $$
+$$ P \rightarrow 0P0 $$
+$$ P \rightarrow 1P1 $$
+
 ### Q3.b
 
+$$ \{ \omega \in \{0,1\}^* | \omega \text{ contains the same number of 0s and 1s.} \} $$
+
+$$ G = (\{P\},\{0,1\},A,P) $$
+
+The grammar rules are:
+
+$$ P \rightarrow \epsilon $$
+$$ P \rightarrow 01P $$
+$$ P \rightarrow 10P $$
+$$ P \rightarrow 1P0 $$
+$$ P \rightarrow 0P1 $$
+
 ### Q3.c
+
+$$ \{ \omega \in \{0,1\}^* | \omega = 0^n1^n, n \geq 0 \} $$
+
+$$ G = (\{P\},\{0,1\},A,P) $$
+
+The grammar rules are:
+
+$$ P \rightarrow \epsilon $$
+$$ P \rightarrow 0P1 $$
 
 ## Question 4
 
