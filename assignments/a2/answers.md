@@ -24,17 +24,35 @@ $$ \{ \omega \in \{0,1\}^* : \omega \text{ is of length 1 or } \omega \text{ is 
 
 ### Q2.a
 
-$$ \{ 0^n1^m0^n | m,n \geq 0 \} $$
+$$ \{ 0^n10^n | m,n \geq 0 \} $$
 
-$$ \omega = 0^p1^m0^p $$
+Noting the pumping length is $p$.
 
-$$ x=0^e, y=0^f, z=1^m0^p, e+f=p $$
+$$ \omega = 0^p10^p $$
 
-$$ \omega = xy^0z = 0^{p-f} (0^f)^0 1^m 0^p = 0^{p-f} 1^m 0^p \notin L $$
+We know $|xy| \leq p$, so:
+
+$$ x=0^e, y=0^f, z=10^p $$
+
+$$ \omega = xy^0z = 0^{p-f} (0^f)^0 1 0^p = 0^{p-f} 1 0^p \notin L $$
 
 Since the string does not contain enough $0$'s at the start, this is not regular.
 
 ### Q2.b
+
+$$ \{ 0^m1^n | m \neq n \} $$
+
+Noting the pumping length is $p$, choosing an $\omega$ with $n=1$.
+
+$$ \omega = 0^p1 $$
+
+We know $|xy| \leq p$, so:
+
+$$ x=0, y=0^{p-1}, z=1 $$
+
+$$ \omega = xy^0z = 0(0^{p-1})^0 1 = 01 \notin L $$
+
+Since the string has an equal $m$ and $n$ values this is not regular.
 
 ### Q2.c
 
@@ -80,7 +98,6 @@ $$ P \rightarrow \epsilon $$
 $$ P \rightarrow 0P1 $$
 
 ## Question 4
-
 
 ## Question 5
 
