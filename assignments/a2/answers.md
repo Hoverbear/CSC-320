@@ -56,6 +56,20 @@ Since the string has an equal $m$ and $n$ values this is not regular.
 
 ### Q2.c
 
+$$ \{ wtw | w,t \in \{0,1\}^* \} $$
+
+Noting the pumping length is $p$, choosing an $\omega$:
+
+$$ \omega = (01)^p (111) (01)^p $$
+
+We know $|xy| \leq p$, so:
+
+$$ x=(01)^{p-e}, y=(01)^{p-f}, z=(111)(01)^p $$
+
+$$ \omega = xy^0z = (01)^{p-e} (111)(01)^p \notin L $$
+
+Since the string does not contain two $w$ pieces this is not regular.
+
 ## Question 3
 
 ### Q3.a
