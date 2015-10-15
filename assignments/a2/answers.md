@@ -113,6 +113,18 @@ $$ P \rightarrow 0P1 $$
 
 ## Question 4
 
+$$ A = \{ a^i b^j c^k | i=j \text{ or } j=k \text{ where } i,j,k \geq 0 \} $$
+
+$$ S \rightarrow S_1 | S_2 $$
+$$ S_1 \rightarrow XC $$
+$$ S_2 \rightarrow AY $$
+$$ A \rightarrow aA|\epsilon $$
+$$ C \rightarrow cC|\epsilon $$
+$$ X \rightarrow aXb $$
+$$ Y \rightarrow abY $$
+
+This grammar is ambiguous because of $S \rightarrow S_1 | S_2$ which results in differing parse trees.
+
 ## Question 5
 
 ## Question 6
