@@ -127,6 +127,18 @@ This grammar is ambiguous because of $S \rightarrow S_1 | S_2$ which results in 
 
 ## Question 5
 
+Noting the terminals `+`, `*`, `num`.
+
+$$ E_0 \rightarrow E $$
+$$ E \rightarrow EN_1 | T $$
+$$ N_1 \rightarrow N_z T $$
+$$ N_z \rightarrow + $$
+$$ T \rightarrow TN_2 | F $$
+$$ N_2 \rightarrow N_y F $$
+$$ N_y \rightarrow * $$
+$$ F \rightarrow (E) | N_n $$
+$$ N_n \rightarrow \text{num} $$
+
 ## Question 6
 
 ## Question 7
