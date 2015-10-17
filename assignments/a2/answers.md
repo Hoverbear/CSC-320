@@ -147,3 +147,22 @@ $$ N_{\text{num}} \rightarrow \text{num} $$
 
 
 ## Question 7
+
+Consider the grammar
+
+$$ A \rightarrow A + A | A - A | a $$
+
+Broken down to CNF it is:
+
+$$ A \rightarrow AB | AC | D $$
+$$ B \rightarrow EA $$
+$$ C \rightarrow FA $$
+$$ D \rightarrow a $$
+$$ E \rightarrow + $$
+$$ F \rightarrow - $$
+
+However this grammar is still ambiguous. Consider how it might parse:
+
+$$ a + a + a + a - a - a - a + a $$
+
+There are more than one parse trees for this sequence even in CNF form, so it's still ambiguous.
