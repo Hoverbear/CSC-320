@@ -127,22 +127,23 @@ This grammar is ambiguous because of $S \rightarrow S_1 | S_2$ which results in 
 
 ## Question 5
 
-Noting the terminals `+`, `*`, `num`.
+Noting the terminals `+`, `*`, `num`, `(`, `)`.
 
 $$ E_0 \rightarrow E $$
-$$ E \rightarrow EN_1 | T $$
-$$ N_1 \rightarrow N_z T $$
-$$ N_z \rightarrow + $$
-$$ T \rightarrow TN_2 | F $$
-$$ N_2 \rightarrow N_y F $$
-$$ N_y \rightarrow * $$
-$$ F \rightarrow (E) | N_n $$
-$$ N_n \rightarrow \text{num} $$
+$$ E \rightarrow E N_1 | T $$
+$$ T \rightarrow T N_2 | F $$
+$$ N_1 \rightarrow N_{\text{plus}} T $$
+$$ N_2 \rightarrow N_{\text{star}} F $$
+$$ F \rightarrow N_{\text{open}} G | N_{\text{num}} $$
+$$ G \rightarrow E N_{\text{closed}} $$
+$$ N_{\text{plus}} \rightarrow + $$
+$$ N_{\text{star}} \rightarrow * $$
+$$ N_{\text{open}} \rightarrow ( $$
+$$ N_{\text{closed}} \rightarrow ) $$
+$$ N_{\text{num}} \rightarrow \text{num} $$
 
 ## Question 6
 
+
+
 ## Question 7
-
-## Question 8
-
-## Question 9
