@@ -144,6 +144,35 @@ $$ N_{\text{num}} \rightarrow \text{num} $$
 
 ## Question 6
 
+Using the grammar given:
+
+$$ E \rightarrow ET | EF | OR $$
+$$ T \rightarrow PE $$
+$$ F \rightarrow ME $$
+$$ R \rightarrow EC $$
+$$ E \rightarrow id $$
+$$ E \rightarrow num $$
+$$ P \rightarrow + $$
+$$ M \rightarrow * $$
+$$ O \rightarrow ( $$
+$$ C \rightarrow ) $$
+
+Checking the string:
+
+$$ \omega = (id + num) * num $$
+$$ \omega = \omega_1 \omega_2 \omega_3 \omega_4 \omega_5 \omega_6 \omega_7 $$
+
+|   | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|---|---|---|---|---|---|---|---|
+| 1 | O | - | - | - | E | - | E |
+| 2 |   | E | - | E | R | - | - |
+| 3 |   |   | P | T | - | - | - |
+| 4 |   |   |   | E | R | - | - |
+| 5 |   |   |   |   | C | - | - |
+| 6 |   |   |   |   |   | M | F |
+| 7 |   |   |   |   |   |   | E |
+
+
 
 
 ## Question 7
