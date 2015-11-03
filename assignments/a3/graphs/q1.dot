@@ -1,0 +1,52 @@
+digraph finite_state_machine {
+    rankdir = LR;
+    /*size = "4,6"*/
+    /*ppi = 300*/
+    node [ shape = none ] "";
+    node [ shape = doublecircle ]; "Accept";
+    node [ shape = circle ];
+
+    "" -> "Start"
+
+    "Start" -> "1"  [ label = "ϵ,ϵ→$" ]
+
+    "1" -> "2"      [ label = "ϵ,ϵ→S" ]
+
+    "2" -> "Loop"   [ label = "ϵ,ϵ→S" ]
+
+    "Loop" -> "Loop" [ label = "a,a→ϵ \nb,b→ϵ"]
+
+    "Loop" -> "Accept" [ label = "ϵ,$→ϵ"]
+
+    # Rule 1 - 1
+    "Loop" -> "S → aAbS 1" [ label = "ϵ,S→a" ]
+    "S → aAbS 1" -> "S → aAbS 2" [ label = "ϵ,ϵ→A" ]
+    "S → aAbS 2" -> "S → aAbS 3" [ label = "ϵ,ϵ→b" ]
+    "S → aAbS 3" -> "S → aAbS 4" [ label = "ϵ,ϵ→S" ]
+    "S → aAbS 4" -> "Loop"  [ label = "ϵ,ϵ→ϵ"]
+
+    # Rule 1 - 2
+    "Loop" -> "S → bBaS 1" [ label = "ϵ,S→b" ]
+    "S → bBaS 1" -> "S → bBaS 2" [ label = "ϵ,ϵ→B" ]
+    "S → bBaS 2" -> "S → bBaS 3" [ label = "ϵ,ϵ→a" ]
+    "S → bBaS 3" -> "S → bBaS 4" [ label = "ϵ,ϵ→S" ]
+    "S → bBaS 4" -> "Loop"  [ label = "ϵ,ϵ→ϵ"]
+
+    # Rule 1 - 3, 2 - 2, 3 - 2
+    "Loop" -> "ϵ 1" [ label = "ϵ,S→ϵ \nϵ,A→ϵ \nϵ,B→ϵ" ]
+    "ϵ 1" -> "Loop" [ label = "ϵ,ϵ→ϵ" ]
+
+    # Rule 2 - 1
+    "Loop" -> "A → aAbA 1" [ label = "ϵ,A→a" ]
+    "A → aAbA 1" -> "A → aAbA 2" [ label = "ϵ,ϵ→A" ]
+    "A → aAbA 2" -> "A → aAbA 3" [ label = "ϵ,ϵ→b" ]
+    "A → aAbA 3" -> "A → aAbA 4" [ label = "ϵ,ϵ→A" ]
+    "A → aAbA 4" -> "Loop" [ label = "ϵ,ϵ→ϵ" ]
+
+    # Rule 3 - 1
+    "Loop" -> "B → bBaB 1" [ label = "ϵ,B→b" ]
+    "B → bBaB 1" -> "B → bBaB 2" [ label = "ϵ,ϵ→B" ]
+    "B → bBaB 2" -> "B → bBaB 3" [ label = "ϵ,ϵ→a" ]
+    "B → bBaB 3" -> "B → bBaB 4" [ label = "ϵ,ϵ→B" ]
+    "B → bBaB 4" -> "Loop" [ label = "ϵ,ϵ→ϵ" ]
+}

@@ -4,3 +4,5 @@ author: Andrew Hobden (V00788452)
 ---
 
 ## Question 1
+
+![](img/q1.png)\
