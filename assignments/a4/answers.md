@@ -60,17 +60,21 @@ In class we showed that $E_{TM}$ is undecidable.
 
 Showing $\bar E_{TM}$ is recognizable.
 
-We create a construct that non-deterministically starts running the input $M$ in parallel. If any of the paths accept, $\bar E_{TM}$ can accept. If one or more fails to halt that is fine since we are seeking recognizability.
+We create a construct that non-deterministically starts running the input $M$ in parallel. If any of the paths in $\bar E_{TM}$ accept, $\bar E_{TM}$ can reject. If one or more fails to halt that is fine since we are seeking recognizability.
 
 ## Question 4
 
 Showing
 
-$$ \{ <M_1,M_2> | L(M_1) \cap L(M_2) = \empty \} $$
+$$ \{ <M_1,M_2> | L(M_1) \cap L(M_2) = \emptyset \} $$
 
-is not recognizable. Using $E_{TM} = \{ <M> | \text{ M is a TM and } L=(M)=\empty \}$.
+is not recognizable.
 
-<!-- TODO -->
+Using $E_{TM} = \{ <M> | \text{ M is a TM and } L=(M)=\emptyset \}$.
+
+We know that $E_{TM}$ is not decidable and that $\bar E_{TM}$ is recognizable (Q3) therefore this implies that $E_{TM}$ is indeed **not** recognizable. (Since if it was then $E_{TM}$ would be decidable.)
+
+Since running $\{ <M_1,M_2> | L(M_1) \cap L(M_2) = \emptyset \}$ with both $M_1$ and $M_2$ as the same TM as both inputs would effectively be running $E_{TM}$ we can deduce that $\{ <M_1,M_2> | L(M_1) \cap L(M_2) = \emptyset \}$ is not recognizable.
 
 ## Question 5
 
